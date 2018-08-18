@@ -5,12 +5,16 @@ import Chat from './component/Chat'
 import Hello from './component/Hello'
 import ListSample from './component/ListSample'
 import WizardSample from './component/WizardSample'
+import CommentBox from './views/CommentBox/CommentBox'
+import TabSelector from './views/TabSelect/TabSelector'
 
 const routeMap = {
   'my-name': Myname,
+  'comment-box': CommentBox,
+  'tab-selector': TabSelector,
   timer: Timer,
   chat: Chat,
-  hello: Hello
+  hello: Hello,
 }
 
 const styles = {

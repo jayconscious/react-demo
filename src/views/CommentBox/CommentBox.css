@@ -1,0 +1,28 @@
+
+.comment-box {
+    width: 400px;
+}
+.comment-item {
+    position: relative;
+    height: 80px;
+    padding-left: 80px;
+    padding-top: 5px;
+}
+.avatar {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 60px;
+    height: 60px;
+    background-color: #71C7AD;
+}
+p {
+    margin: 0;
+}
+.comment-form textarea {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    height: 100px;
+    margin-bottom: 20px;
+  }
