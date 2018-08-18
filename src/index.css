@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.menu-list {
+  position: absolute;
+  background-color: #333333;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  width: 200px;
+  padding-top: 30px;
+}
+.menu-list > li {
+  padding: 5px 15px;
+  color: #71C7AD;
+}
+.menu-list > li.is-active {
+  color: white;
+  background-color: #71C7AD;
+}
+.link {
+  display: block;
+  cursor: pointer;
+}
+
