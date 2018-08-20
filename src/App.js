@@ -1,19 +1,19 @@
 import React from 'react'
 import Myname from './component/Myname'
 import Timer from './component/Timer'
-import Chat from './component/Chat'
 import Hello from './component/Hello'
 import ListSample from './component/ListSample'
 import WizardSample from './component/WizardSample'
 import CommentBox from './views/CommentBox/CommentBox'
 import TabSelector from './views/TabSelect/TabSelector'
+import ChatApp from './views/ChatApp/ChatApp'
 
 const routeMap = {
   'my-name': Myname,
   'comment-box': CommentBox,
   'tab-selector': TabSelector,
+  'chat-app': ChatApp,
   timer: Timer,
-  chat: Chat,
   hello: Hello,
 }
 

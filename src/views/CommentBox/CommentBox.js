@@ -21,26 +21,30 @@ class CommentBox extends React.PureComponent {
             { 
                 author: "朱志勇", 
                 content: "杭州，前端开发，react studying"
-            }]
+            }],
+            val: ''
     }
     editComment = content => {
         console.log('content :', content)
-        // this.setState({
-        //     comments: this.state.comments.push({
-        //         content,
-        //         author: 'default'
-        //     })
-        // }, () => {
-        //     console.log('this.state :', this.state);
-        // })
+        if (content) {
+            // 写法一
+            // const newList = [...this.state.comments, {content, author: 'default'}]
+            // this.setState({comments: newList})
+            // 写法二
+            this.setState(prevState => ({
+                comments: prevState.comments.concat([{content, author: 'default'}])
+                // TODO: 为什么 push() 不可以添加呢？
+                // comments: prevState.comments.push({content, author: 'default'})
+            }))
+        }
     }
     render() {
-        const { comments } = this.state
+        const { comments, val } = this.state
         return (
             <div className="comment-box">
                 <h2>chzu 223 共计 ({comments.length}) 人</h2>
                 <CommentList comments={comments} />
-                <CommentForm onSubmit={content => this.editComment(content)}/>
+                <CommentForm onSubmit={this.editComment} value={val}/>
             </div>
         );
     }
