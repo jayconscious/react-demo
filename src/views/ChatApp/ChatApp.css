@@ -7,3 +7,10 @@
     opacity: .5;
     color: white;
 }
+.snapshot-sample {
+    overflow: auto;
+    height: 100px;
+    width: 300px;
+    border: 1px solid #333;
+    padding: 20px;
+}

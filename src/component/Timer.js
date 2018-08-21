@@ -18,7 +18,7 @@ class Timer extends Component {
         clearInterval(this.timer)
     }
     componentDidUpdate () {
-        console.log('页面更新了')
+        // console.log('页面更新了')
     }
     render() {
         return (

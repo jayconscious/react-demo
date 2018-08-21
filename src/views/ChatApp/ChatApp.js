@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import WithTimer from '../WithTimer/WithTimer'
+import FuncAsComponent from '../FuncAsComponent/FuncAsComponent'
 import './ChatApp.css'
 
 class MessageList extends PureComponent {
@@ -44,8 +46,15 @@ class ChatApp extends PureComponent {
                 <MessageList messagesList={this.state.messagesList}/>
                 <input ref="input" onBlur={this.handleInput}/>
                 <button className="btn" onClick={this.submitMsg}>submit</button>
+                <span>{this.props.time.toLocaleTimeString()}</span>
+                {/* 函数作为子组件 */}
+                <FuncAsComponent>
+                    {(name)=> (
+                        <p>{name}</p>
+                    )}
+                </FuncAsComponent>
             </div>
         );
     }
 }
-export default ChatApp
+export default WithTimer(ChatApp)

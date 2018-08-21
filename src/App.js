@@ -7,14 +7,16 @@ import WizardSample from './component/WizardSample'
 import CommentBox from './views/CommentBox/CommentBox'
 import TabSelector from './views/TabSelect/TabSelector'
 import ChatApp from './views/ChatApp/ChatApp'
+import SnapshotBeforeUpdate from './views/ChatApp/SnapshotBeforeUpdate'
 
 const routeMap = {
   'my-name': Myname,
   'comment-box': CommentBox,
   'tab-selector': TabSelector,
   'chat-app': ChatApp,
-  timer: Timer,
-  hello: Hello,
+  'snapshot-before-update': SnapshotBeforeUpdate,
+  'timer': Timer,
+  'hello': Hello,
 }
 
 const styles = {

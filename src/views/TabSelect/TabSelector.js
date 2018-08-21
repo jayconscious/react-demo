@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+// import WithTimer from '../WithTimer/WithTimer'
+// import Timer from '../../component/Timer'
 import './TabSelector.css'
 
 class TabSelector extends PureComponent {
     static propTypes = {
         value: PropTypes.string,
         options: PropTypes.array,
-        onChange: PropTypes.func
+        onChange: PropTypes.func,
+        children: PropTypes.func
     }
     static defaultProps = {
         value: null,
@@ -30,13 +33,11 @@ class TabSelector extends PureComponent {
                         </li>
                     ))}
                 </ul>
+                <div>
+                    {this.props.value && this.props.children(this.props.value)}
+                </div>
             </div>
         )
-    }
-
-    componentDidUpdate () {
-        console.log('子组件更新完毕：')
-        console.log(this.props)
     }
 }
 
@@ -56,32 +57,29 @@ const options = [{
 
 class TabSelectorExample extends PureComponent {
     state = {
-        index: null
+        leader: null
     }
-    // showLabel = (opt, val) => {
-    //     let label = ''
-    //     opt.map((item) => {
-    //         if (item.value === val) {
-    //             label = item.item
-    //         }
-    //     })
-    //     return label
-    // }
     render() {
         return (
             <div>
                 Select leader is: {this.state.leader?this.state.leader: 'chzu223'} <br/>
-                <TabSelector 
+                <TabSelector
                 value={this.state.leader} 
                 options={options}
-                onChange={val => {
-                    this.setState({leader: val}, 
-                    () => console.log(this.state.leader))
+                onChange={val => this.setState({leader: val})}
+                >
+                {(val) => {
+                    if (val === '13') {
+                        return <span>The value is {val}</span>
+                    } else{
+                        return <p>The val is {val}</p>
+                    }
                 }}
-                />
+                </TabSelector>
             </div>
         );
     }
 }
 
-export default TabSelectorExample;
+// export default WithTimer(TabSelectorExample)
+export default TabSelectorExample

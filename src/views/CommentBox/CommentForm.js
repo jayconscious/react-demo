@@ -19,7 +19,7 @@ class CommentForm extends PureComponent {
         })
     }
     render() {
-        const { onSubmit, value } = this.props
+        const { onSubmit } = this.props
         const { content } = this.state
         return (
             <div className="comment-form">

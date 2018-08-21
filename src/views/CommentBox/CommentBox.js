@@ -32,10 +32,16 @@ class CommentBox extends React.PureComponent {
             // this.setState({comments: newList})
             // 写法二
             this.setState(prevState => ({
-                comments: prevState.comments.concat([{content, author: 'default'}])
-                // TODO: 为什么 push() 不可以添加呢？
+                // comments: prevState.comments.concat([{content, author: 'default'}])
+                comments: [...prevState.comments, {content, author: 'default'}]
+                // TODO: why can't work
                 // comments: prevState.comments.push({content, author: 'default'})
             }))
+            // 写法三 要用setState去触发 state的更新
+            // this.state.comments.push({content, author: 'default'})
+            // this.setState({
+            //     comments: this.state.comments
+            // })
         }
     }
     render() {
