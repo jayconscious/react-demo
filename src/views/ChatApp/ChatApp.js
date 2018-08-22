@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import WithTimer from '../WithTimer/WithTimer'
+import WithTimer from '../HigherOrderComponent/WithTimer'
 import FuncAsComponent from '../FuncAsComponent/FuncAsComponent'
 import './ChatApp.css'
 

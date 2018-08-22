@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-// import WithTimer from '../WithTimer/WithTimer'
+// import WithTimer from '../HigherOrderComponent/WithTimer'
 // import Timer from '../../component/Timer'
 import './TabSelector.css'
 
@@ -59,6 +59,7 @@ class TabSelectorExample extends PureComponent {
     state = {
         leader: null
     }
+    handleVal = val => { this.setState({leader: val}) }
     render() {
         return (
             <div>
@@ -66,7 +67,7 @@ class TabSelectorExample extends PureComponent {
                 <TabSelector
                 value={this.state.leader} 
                 options={options}
-                onChange={val => this.setState({leader: val})}
+                onChange={this.handleVal}
                 >
                 {(val) => {
                     if (val === '13') {
