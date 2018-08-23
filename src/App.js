@@ -9,6 +9,7 @@ import TabSelector from './views/TabSelect/TabSelector'
 import ChatApp from './views/ChatApp/ChatApp'
 import SnapshotBeforeUpdate from './views/ChatApp/SnapshotBeforeUpdate'
 import ComponentChannel from './views/ContextApi/ComponentChannel'
+import ReduxDemo from './views/Redux/ReduxDemo'
 
 const routeMap = {
   'my-name': Myname,
@@ -18,7 +19,8 @@ const routeMap = {
   'snapshot-before-update': SnapshotBeforeUpdate,
   'timer': Timer,
   'hello': Hello,
-  'component-channel': ComponentChannel
+  'component-channel': ComponentChannel,
+  'redux-demo': ReduxDemo
 }
 
 const styles = {
