@@ -10,6 +10,7 @@ import ChatApp from './views/ChatApp/ChatApp'
 import SnapshotBeforeUpdate from './views/ChatApp/SnapshotBeforeUpdate'
 import ComponentChannel from './views/ContextApi/ComponentChannel'
 import ReduxDemo from './views/Redux/ReduxDemo'
+import ChangeContext  from './views/ContextApi/ChangeContext'
 
 const routeMap = {
   'my-name': Myname,
@@ -20,6 +21,7 @@ const routeMap = {
   'timer': Timer,
   'hello': Hello,
   'component-channel': ComponentChannel,
+  'change-context': ChangeContext,
   'redux-demo': ReduxDemo
 }
 
