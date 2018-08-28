@@ -27,5 +27,7 @@ body {
 .link {
   display: block;
   cursor: pointer;
+  text-decoration: none;
+  color: #71C7AD
 }
 
